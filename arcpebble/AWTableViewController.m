@@ -18,46 +18,6 @@
 - (void)getJobs
 {
     static NSString * const BaseURLString = @"http://bill.arcweb.co:8080/";
-    
-    NSString *string = [NSString stringWithFormat:@"%@api/json", BaseURLString];
-    
-    //NSString *plainAuthString = @"mroll@arcwebtech.com:54b68a7fb6a9cfc5fc54fabe2813cda2";
-    //NSData *plainData = [plainAuthString dataUsingEncoding:NSUTF8StringEncoding];
-    //NSString *base64String = [plainData base64EncodedStringWithOptions:0];
-    //NSString *encodedAuthString = [NSString stringWithFormat:@"Basic %@", base64String];
-    
-    // 2
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    //[manager.requestSerializer setValue:encodedAuthString forHTTPHeaderField:@"Authorization"];
-    
-    [manager GET:string
-      parameters:nil
-         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-             //NSLog(@"JSON: %@", [NSJSONSerialization isValidJSONObject:responseObject] ? @"YES" : @"NO");
-             
-             
-             if( [NSJSONSerialization isValidJSONObject:responseObject] ) {
-                 
-                 
-                self.jobs = [responseObject objectForKey:@"jobs"];
-                [self.tableView reloadData];
-                 
-             } else {
-                 
-                 NSLog(@"We're good");
-             }
-             
-         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-             NSLog(@"Error: %@", error);
-        
-         }];
-    
-}
-
-- (void)jsonTapped
-{
-    static NSString * const BaseURLString = @"http://bill.arcweb.co:8080/";
     // 1
     NSString *string = [NSString stringWithFormat:@"%@api/json", BaseURLString];
     NSURL *url = [NSURL URLWithString:string];
@@ -70,7 +30,6 @@
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         // 3
-        
         NSArray *jobArray = [responseObject objectForKey:@"jobs"];
         self.jobs = [[NSMutableArray alloc] init];
         
@@ -79,7 +38,7 @@
             [self.jobs addObject:name];
         }
         
-        NSLog(@"%@", self.jobs);
+        //NSLog(@"%@", self.jobs);
         [self.tableView reloadData];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -101,12 +60,9 @@
 {
     [super viewDidLoad];
     // Initialize table data
-    //jobs = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
     
-    [self jsonTapped];
-    NSLog(@"%@", self.jobs);
-    
-    
+    [self getJobs];
+    //NSLog(@"%@", self.jobs);
 }
 
 

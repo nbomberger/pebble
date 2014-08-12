@@ -14,6 +14,4 @@
 
 - (void)getJobs;
 
-- (void)jsonTapped;
-
 @end

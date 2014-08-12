@@ -21,7 +21,6 @@
 		5EE712E6199939BA0000B234 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE712C8199939BA0000B234 /* UIKit.framework */; };
 		5EE712EE199939BA0000B234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EE712EC199939BA0000B234 /* InfoPlist.strings */; };
 		5EE712F0199939BA0000B234 /* arcpebbleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE712EF199939BA0000B234 /* arcpebbleTests.m */; };
-		5EE7130019993BF60000B234 /* DataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE712FF19993BF60000B234 /* DataView.m */; };
 		5EE71306199951D30000B234 /* AWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE71305199951D30000B234 /* AWTableViewController.m */; };
 		E04C5F6DA9DD4B47B71EF413 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 596400C36D7F4898BEF9245B /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -57,8 +56,6 @@
 		5EE712EB199939BA0000B234 /* arcpebbleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "arcpebbleTests-Info.plist"; sourceTree = "<group>"; };
 		5EE712ED199939BA0000B234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5EE712EF199939BA0000B234 /* arcpebbleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arcpebbleTests.m; sourceTree = "<group>"; };
-		5EE712FE19993BF60000B234 /* DataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataView.h; sourceTree = "<group>"; };
-		5EE712FF19993BF60000B234 /* DataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataView.m; sourceTree = "<group>"; };
 		5EE71304199951D30000B234 /* AWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWTableViewController.h; sourceTree = "<group>"; };
 		5EE71305199951D30000B234 /* AWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWTableViewController.m; sourceTree = "<group>"; };
 		5EE7130919995B0E0000B234 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -130,8 +127,6 @@
 		5EE712B8199939B90000B234 = {
 			isa = PBXGroup;
 			children = (
-				5EE712FE19993BF60000B234 /* DataView.h */,
-				5EE712FF19993BF60000B234 /* DataView.m */,
 				5EE712CA199939BA0000B234 /* arcpebble */,
 				5EE712E9199939BA0000B234 /* arcpebbleTests */,
 				5EE712C3199939BA0000B234 /* Frameworks */,
@@ -403,7 +398,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE712D5199939BA0000B234 /* AWAppDelegate.m in Sources */,
-				5EE7130019993BF60000B234 /* DataView.m in Sources */,
 				5EE71306199951D30000B234 /* AWTableViewController.m in Sources */,
 				5EE712DB199939BA0000B234 /* AWViewController.m in Sources */,
 				5EE712D1199939BA0000B234 /* main.m in Sources */,
